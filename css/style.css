@@ -77,11 +77,49 @@ body {
 .hamburger span { width: 25px; height: 2px; background: white; transition: var(--transition); }
 .navbar.scrolled .hamburger span { background: var(--text-dark); }
 
-/* Language Switch */
-.lang-switch { display: flex; gap: 4px; margin-left: 20px; align-items: center; }
-.lang-switch a { padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.7); text-decoration: none; transition: var(--transition); border: 1px solid rgba(255,255,255,0.2); }
-.lang-switch a:hover { color: var(--primary); border-color: var(--primary); }
-.lang-switch a.active { background: var(--primary); color: white; border-color: var(--primary); }
+/* ===== Language Switch (데스크톱) ===== */
+.lang-switch {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+.lang-switch a {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+.lang-switch a:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.lang-switch a.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* 스크롤 시 */
+.navbar.scrolled .lang-switch a {
+    color: var(--text-medium);
+    border-color: var(--border);
+}
+.navbar.scrolled .lang-switch a:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+.navbar.scrolled .lang-switch a.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
 
 /* ========== HERO ========== */
 .hero {
@@ -302,7 +340,21 @@ footer p { font-size: 0.85rem; font-weight: 300; line-height: 1.9; }
     .nav-links li:last-child a { border-bottom: none; }
     .nav-cta { text-align: center; margin-top: 8px; border-radius: 8px !important; padding: 12px 20px !important; font-size: 0.95rem !important; }
     .hamburger { display: flex; }
-    .lang-switch { margin-left: auto; margin-right: 16px; margin-top: 0; }
+        .lang-switch {
+        margin-left: auto;
+        margin-right: 12px;
+        gap: 2px;
+    }
+    .lang-switch a {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+        color: rgba(255,255,255,0.8);
+        border-color: rgba(255,255,255,0.25);
+    }
+    .navbar.scrolled .lang-switch a {
+        color: var(--text-light);
+        border-color: var(--border);
+    }
     .partners-grid { grid-template-columns: repeat(2, 1fr); }
     .press-grid { grid-template-columns: repeat(2, 1fr); }
     .partners-logo-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -378,6 +430,8 @@ footer p { font-size: 0.85rem; font-weight: 300; line-height: 1.9; }
     .partners-logo-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; width: 100%; overflow: hidden; }
     .partner-logo-item { padding: 20px 12px; min-height: 80px; min-width: 0; }
     .partner-logo-item img { max-width: 100%; max-height: 48px; }
-
-
+    .lang-switch a {
+        padding: 3px 6px;
+        font-size: 0.65rem;
+    }
 }
