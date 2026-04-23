@@ -202,7 +202,7 @@ section { padding: 120px 5%; }
 .press-card-body h4 { font-size: 1.05rem; font-weight: 700; color: var(--text-dark); margin-bottom: 10px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .press-card-body p { font-size: 0.88rem; font-weight: 400; color: var(--text-light); line-height: 1.7; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* ========== PARTNERS (로고 그리드) ========== */
+/* ========== PARTNERS ========== */
 .partners { background: var(--bg-white); }
 
 .partners-logo-grid {
@@ -218,13 +218,12 @@ section { padding: 120px 5%; }
     align-items: center;
     justify-content: center;
     padding: 32px 24px;
-    background: var(--bg-light);
+    background: #FFFFFF;              /* ← 흰색 배경 통일 */
     border-radius: var(--radius);
     border: 1px solid var(--border);
     transition: var(--transition);
     min-height: 120px;
 }
-
 .partner-logo-item:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
@@ -234,18 +233,20 @@ section { padding: 120px 5%; }
 .partner-logo-item img {
     max-width: 180px;
     max-height: 70px;
-    width: auto;
-    height: auto;
     object-fit: contain;
     filter: grayscale(80%);
     opacity: 0.65;
     transition: var(--transition);
+    /* 로고 자체 배경도 흰색으로 감싸기 (투명 PNG 대응) */
+    background: #FFFFFF;
+    padding: 4px;
+    border-radius: 4px;
 }
-
 .partner-logo-item:hover img {
     filter: grayscale(0%);
     opacity: 1;
 }
+
 
 
 /* ========== CONTACT ========== */
@@ -375,5 +376,6 @@ footer p { font-size: 0.85rem; font-weight: 300; line-height: 1.9; }
     .partners-logo-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
     .partner-logo-item { padding: 24px 16px; min-height: 90px; }
     .partner-logo-item img { max-width: 140px; max-height: 50px; }
+
 
 }
