@@ -207,10 +207,12 @@ section { padding: 120px 5%; }
 
 .partners-logo-grid {
     max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    box-sizing: border-box;
 }
 
 .partner-logo-item {
@@ -373,9 +375,9 @@ footer p { font-size: 0.85rem; font-weight: 300; line-height: 1.9; }
     .footer-logo { font-size: 1.1rem; }
     footer p { font-size: 0.78rem; line-height: 1.8; }
     .footer-links { gap: 20px; margin-top: 16px; }
-    .partners-logo-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .partner-logo-item { padding: 24px 16px; min-height: 90px; }
-    .partner-logo-item img { max-width: 140px; max-height: 50px; }
+    .partners-logo-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; width: 100%; overflow: hidden; }
+    .partner-logo-item { padding: 20px 12px; min-height: 80px; min-width: 0; }
+    .partner-logo-item img { max-width: 100%; max-height: 48px; }
 
 
 }
